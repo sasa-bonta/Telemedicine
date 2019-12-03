@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">Telemedicine</string>
+
+<!--//fragments-->
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_notifications">Notification</string>
+    <string name="title_schedule">Schedule</string>
+    <string name="title_profile">Profile</string>
+
+
 </resources>

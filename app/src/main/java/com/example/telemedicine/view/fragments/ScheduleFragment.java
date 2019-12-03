@@ -4,26 +4,22 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
-import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
 
 import com.example.telemedicine.R;
-import com.example.telemedicine.viewModel.HomeViewModel;
+import com.example.telemedicine.viewModel.DashboardViewModel;
 
-public class HomeFragment extends Fragment {
+public class ScheduleFragment extends Fragment {
 
-    public static HomeFragment newInstance() {
-        return new HomeFragment();
+    public static ScheduleFragment newInstance(){
+        return new ScheduleFragment();
     }
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_schedule, container, false);
         return view;
     }
 }
