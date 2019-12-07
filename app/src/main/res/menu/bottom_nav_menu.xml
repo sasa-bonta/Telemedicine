@@ -1,22 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <item
         android:id="@+id/navigation_home"
-        android:icon="@drawable/ic_home_black_24dp"
+        android:icon="@drawable/bottom_nav_home"
         android:title="@string/title_home" />
 
     <item
         android:id="@+id/navigation_notifications"
-        android:icon="@drawable/ic_notifications_black_24dp"
+        android:icon="@drawable/bottom_nav_notification"
         android:title="@string/title_notifications" />
+
+    <item
+        android:id="@+id/navigation_add"
+        android:title=" "
+        tools:ignore="HardcodedText" />
+
     <item
         android:id="@+id/navigation_schedule"
-        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:icon="@drawable/bottom_nav_schedule"
         android:title="@string/title_schedule" />
     <item
         android:id="@+id/navigation_profile"
-        android:title="@string/title_profile"
-        android:icon="@drawable/ic_dashboard_black_24dp" />
+        android:icon="@drawable/bottom_nav_profile"
+        android:title="@string/title_profile" />
 
 </menu>

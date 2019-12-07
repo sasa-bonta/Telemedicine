@@ -13,7 +13,7 @@ import com.example.telemedicine.viewModel.DashboardViewModel;
 
 public class ScheduleFragment extends Fragment {
 
-    public static ScheduleFragment newInstance(){
+    public static ScheduleFragment newInstance() {
         return new ScheduleFragment();
     }
 
