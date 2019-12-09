@@ -1,14 +1,20 @@
 <resources>
     <string name="app_name">Telemedicine</string>
 
-    <!--//fragments-->
+    <!--fragments-->
     <string name="title_home">Home</string>
     <string name="title_notifications">Notification</string>
     <string name="title_schedule">Schedule</string>
     <string name="title_profile">Profile</string>
+    <!--layout text-->
     <string name="sign_up">Sign Up</string>
-
+    <string name="login">Login</string>
+    <string name="welcome">Welcome</string>
+    <string name="text_placeholder">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tortor id aliquet
+        lectus proin nibh nisl.</string>
+    <string name="urgent">Urgent</string>
+    <string name="add_photos">Add Photos</string>
     <!--Misc-->
-
 
 </resources>

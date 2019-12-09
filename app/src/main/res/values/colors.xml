@@ -8,4 +8,6 @@
     <color name="colorText3">#38474f</color>
     <color name="colorText4">#757e99</color>
     <color name="colorText5">#8fa4ae</color>
+    <color name="colorText6">#ced6db</color>
+    <color name="colorWhite">#fff</color>
 </resources>
