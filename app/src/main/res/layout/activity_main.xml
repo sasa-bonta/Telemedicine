@@ -10,8 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/navigation_view"
-        app:layout_constraintTop_toBottomOf="@+id/fragments_app_bar"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/fragments_app_bar"/>
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/fragments_app_bar"

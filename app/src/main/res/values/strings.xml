@@ -31,6 +31,16 @@
     <string name="next_button">Next</string>
     <string name="email_address_description">Email Address</string>
     <string name="password_description">Password</string>
+    <string name="very_urgent_button">Very Urgent</string>
+    <string name="home_name_header">Name</string>
+    <string name="home_name_description">Your Name</string>
+    <string name="home_illness_description">What is your illness</string>
+    <string name="home_disease_header">Disease</string>
+    <string name="home_location_header">Location</string>
+    <string name="home_location_description">Your Location</string>
+    <string name="home_description_header">Description (Optional)</string>
+    <string name="home_description_body">Describe Here</string>
+    <string name="home_request_button">Request</string>
     <!--Misc-->
 
 </resources>
