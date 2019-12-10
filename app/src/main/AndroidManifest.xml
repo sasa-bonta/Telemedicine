@@ -10,7 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".view.activities.LoginActivity"></activity>
+        <activity
+            android:name=".view.activities.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".view.activities.SignUpActivity"
             android:screenOrientation="portrait"

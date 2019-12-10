@@ -10,11 +10,27 @@
     <string name="sign_up">Sign Up</string>
     <string name="login">Login</string>
     <string name="welcome">Welcome</string>
+    <string name="urgent_button">Urgent</string>
+    <string name="add_photos">Add Photos</string>
+
     <string name="text_placeholder">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tortor id aliquet
         lectus proin nibh nisl.</string>
-    <string name="urgent">Urgent</string>
-    <string name="add_photos">Add Photos</string>
+
+    <!--Sign Up/ Login screens-->
+    <string name="full_name_header">Full Name</string>
+    <string name="full_name_description">Your Full Name</string>
+    <string name="birthday_header">Birthday</string>
+    <string name="birthday_format_description">dd/mm/yy</string>
+    <string name="email_header">Email</string>
+    <string name="email_description">Your Email</string>
+    <string name="phone_number_header">Phone Number</string>
+    <string name="phone_number_description">Your Phone Number</string>
+    <string name="address_header">Location/Address</string>
+    <string name="address_description">Your Location</string>
+    <string name="next_button">Next</string>
+    <string name="email_address_description">Email Address</string>
+    <string name="password_description">Password</string>
     <!--Misc-->
 
 </resources>

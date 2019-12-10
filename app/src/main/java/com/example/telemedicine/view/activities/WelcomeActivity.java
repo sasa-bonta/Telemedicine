@@ -31,13 +31,14 @@ public class WelcomeActivity extends AppCompatActivity {
         loginButton = findViewById(R.id.welcome_button_login);
         urgentButton = findViewById(R.id.welcome_button_urgent);
 
-        signUpButton.setOnClickListener(view -> {
-            startActivity(new Intent(this, SignUpActivity.class));
-        });
+        signUpButton.setOnClickListener(view ->
+                startActivity(new Intent(this, SignUpActivity.class)));
         urgentButton.setOnClickListener(view -> {
             startActivity(new Intent(this, MainActivity.class));
             finish();
         });
+        loginButton.setOnClickListener(view ->
+                startActivity(new Intent(this, LoginActivity.class)));
     }
 
 }
