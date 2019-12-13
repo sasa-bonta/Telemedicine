@@ -42,5 +42,6 @@
     <string name="home_description_body">Describe Here</string>
     <string name="home_request_button">Request</string>
     <!--Misc-->
+    <string name="approve_req_message">Your Request Has Been\nApproved</string>
 
 </resources>
