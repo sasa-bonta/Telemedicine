@@ -43,5 +43,8 @@
     <string name="home_request_button">Request</string>
     <!--Misc-->
     <string name="approve_req_message">Your Request Has Been\nApproved</string>
+    <string name="username_header">Username</string>
+    <string name="username_description">Your Username</string>
+    <string name="password_header">Password</string>
 
 </resources>

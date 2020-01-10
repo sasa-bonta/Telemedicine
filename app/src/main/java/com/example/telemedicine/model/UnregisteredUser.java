@@ -3,19 +3,29 @@ package com.example.telemedicine.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class NewUserResponse implements Parcelable {
+import com.google.gson.annotations.SerializedName;
 
+public class UnregisteredUser implements Parcelable {
+
+    @SerializedName("FullName")
     private String fullName;
+    @SerializedName("Birthday")
     private String birthday;
+    @SerializedName("Email")
     private String email;
+    @SerializedName("Phone")
     private String phone;
+    @SerializedName("Address")
     private String address;
+    @SerializedName("Username")
     private String username;
+    @SerializedName("Password")
     private String password;
+    @SerializedName("Base64Photo")
     private String base64Photo;
 
-    public NewUserResponse(String fullName, String birthday, String email, String phone,
-                           String address, String username, String password, String base64Photo) {
+    public UnregisteredUser(String fullName, String birthday, String email, String phone,
+                            String address, String username, String password, String base64Photo) {
         this.fullName = fullName;
         this.birthday = birthday;
         this.email = email;
@@ -26,7 +36,7 @@ public class NewUserResponse implements Parcelable {
         this.base64Photo = base64Photo;
     }
 
-    private NewUserResponse(Parcel in) {
+    private UnregisteredUser(Parcel in) {
         fullName = in.readString();
         birthday = in.readString();
         email = in.readString();
@@ -37,15 +47,32 @@ public class NewUserResponse implements Parcelable {
         base64Photo = in.readString();
     }
 
-    public static final Creator<NewUserResponse> CREATOR = new Creator<NewUserResponse>() {
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(fullName);
+        dest.writeString(birthday);
+        dest.writeString(email);
+        dest.writeString(phone);
+        dest.writeString(address);
+        dest.writeString(username);
+        dest.writeString(password);
+        dest.writeString(base64Photo);
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    public static final Creator<UnregisteredUser> CREATOR = new Creator<UnregisteredUser>() {
         @Override
-        public NewUserResponse createFromParcel(Parcel in) {
-            return new NewUserResponse(in);
+        public UnregisteredUser createFromParcel(Parcel in) {
+            return new UnregisteredUser(in);
         }
 
         @Override
-        public NewUserResponse[] newArray(int size) {
-            return new NewUserResponse[size];
+        public UnregisteredUser[] newArray(int size) {
+            return new UnregisteredUser[size];
         }
     };
 
@@ -81,20 +108,4 @@ public class NewUserResponse implements Parcelable {
         return base64Photo;
     }
 
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeString(fullName);
-        parcel.writeString(birthday);
-        parcel.writeString(email);
-        parcel.writeString(phone);
-        parcel.writeString(address);
-        parcel.writeString(username);
-        parcel.writeString(password);
-        parcel.writeString(base64Photo);
-    }
 }

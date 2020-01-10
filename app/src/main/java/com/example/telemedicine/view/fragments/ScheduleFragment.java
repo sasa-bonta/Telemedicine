@@ -9,7 +9,6 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.example.telemedicine.R;
-import com.example.telemedicine.viewModel.DashboardViewModel;
 
 public class ScheduleFragment extends Fragment {
 
