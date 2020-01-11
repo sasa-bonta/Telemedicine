@@ -1,6 +1,6 @@
 package com.example.telemedicine.request;
 
-import com.example.telemedicine.model.AuthenticationResponse;
+import com.example.telemedicine.model.ServerResponse;
 import com.example.telemedicine.model.Doctor;
 import com.example.telemedicine.model.RegisteredUser;
 import com.example.telemedicine.model.UnregisteredUser;
@@ -25,11 +25,11 @@ public interface RetrofitInterface {
 
     @Headers("Content-Type: application/x-www-form-urlencoded")
     @POST("Register/UserReg")
-    Single<UnregisteredUser> registerUser(@Body UnregisteredUser unregisteredUser);
+    Single<ServerResponse> registerUser(@Body UnregisteredUser unregisteredUser);
 
-    @FormUrlEncoded
+    @Headers("Content-Type: application/x-www-form-urlencoded")
     @POST("Login/UserAuth")
-    Single<AuthenticationResponse> authenticateUser(@Body RegisteredUser registeredUser);
+    Single<ServerResponse> authenticateUser(@Body RegisteredUser registeredUser);
 
     @FormUrlEncoded
     @GET("Profile/GetProfile")

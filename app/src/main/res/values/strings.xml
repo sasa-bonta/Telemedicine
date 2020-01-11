@@ -21,7 +21,7 @@
     <string name="full_name_header">Full Name</string>
     <string name="full_name_description">Your Full Name</string>
     <string name="birthday_header">Birthday</string>
-    <string name="birthday_format_description">dd/mm/yy</string>
+    <string name="birthday_format_description">yyyy/MM/dd</string>
     <string name="email_header">Email</string>
     <string name="email_description">Your Email</string>
     <string name="phone_number_header">Phone Number</string>

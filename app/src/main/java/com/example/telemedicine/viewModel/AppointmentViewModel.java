@@ -29,12 +29,12 @@ public class AppointmentViewModel extends AndroidViewModel {
 
     @SuppressLint("CheckResult")
     public void makeNewAppointmentRequest(String token, UserAppointment appointment) {
-        requestNewAppointment(token, appointment)
+        compositeDisposable.add(requestNewAppointment(token, appointment)
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(userAppointmentResponse ->
                                 appointmentLiveData.postValue(userAppointmentResponse),
-                        Throwable::printStackTrace);
+                        Throwable::printStackTrace));
     }
 
     public MutableLiveData<UserAppointmentResponse> getAppointmentLiveData() {

@@ -1,6 +1,6 @@
 package com.example.telemedicine.request;
 
-import com.example.telemedicine.model.AuthenticationResponse;
+import com.example.telemedicine.model.ServerResponse;
 import com.example.telemedicine.model.Doctor;
 import com.example.telemedicine.model.RegisteredUser;
 import com.example.telemedicine.model.UnregisteredUser;
@@ -50,12 +50,12 @@ public class RetrofitCall {
                 .build();
     }
 
-    public Single<UnregisteredUser> registerNewUser(UnregisteredUser unregisteredUser) {
+    public Single<ServerResponse> registerNewUser(UnregisteredUser unregisteredUser) {
         RetrofitInterface retrofitInterface = getRetrofit(API_BASE_URL).create(RetrofitInterface.class);
         return retrofitInterface.registerUser(unregisteredUser);
     }
 
-    public Single<AuthenticationResponse> authenticateUser(RegisteredUser registeredUser) {
+    public Single<ServerResponse> authenticateUser(RegisteredUser registeredUser) {
         RetrofitInterface retrofitInterface = getRetrofit(API_BASE_URL).create(RetrofitInterface.class);
         return retrofitInterface.authenticateUser(registeredUser);
     }

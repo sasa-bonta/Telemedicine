@@ -5,19 +5,19 @@ import android.os.Parcelable;
 
 import com.google.gson.annotations.SerializedName;
 
-public class AuthenticationResponse implements Parcelable {
+public class ServerResponse implements Parcelable {
 
     @SerializedName("Status")
     private String responseStatus;
     @SerializedName("Message")
     private String responseToken;
 
-    public AuthenticationResponse(String responseStatus, String responseToken) {
+    public ServerResponse(String responseStatus, String responseToken) {
         this.responseStatus = responseStatus;
         this.responseToken = responseToken;
     }
 
-    private AuthenticationResponse(Parcel in) {
+    private ServerResponse(Parcel in) {
         responseStatus = in.readString();
         responseToken = in.readString();
     }
@@ -33,15 +33,15 @@ public class AuthenticationResponse implements Parcelable {
         return 0;
     }
 
-    public static final Creator<AuthenticationResponse> CREATOR = new Creator<AuthenticationResponse>() {
+    public static final Creator<ServerResponse> CREATOR = new Creator<ServerResponse>() {
         @Override
-        public AuthenticationResponse createFromParcel(Parcel in) {
-            return new AuthenticationResponse(in);
+        public ServerResponse createFromParcel(Parcel in) {
+            return new ServerResponse(in);
         }
 
         @Override
-        public AuthenticationResponse[] newArray(int size) {
-            return new AuthenticationResponse[size];
+        public ServerResponse[] newArray(int size) {
+            return new ServerResponse[size];
         }
     };
 

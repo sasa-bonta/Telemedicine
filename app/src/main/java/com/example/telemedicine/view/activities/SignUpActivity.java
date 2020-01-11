@@ -6,7 +6,9 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
@@ -14,8 +16,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.telemedicine.R;
+import com.example.telemedicine.model.ServerResponse;
 import com.example.telemedicine.model.UnregisteredUser;
 import com.example.telemedicine.viewModel.RegisterViewModel;
+
+import java.util.Arrays;
+import java.util.Base64;
 
 public class SignUpActivity extends AppCompatActivity {
 
@@ -41,15 +47,15 @@ public class SignUpActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        registerUser.setOnClickListener(view -> {
-            registerNewUser();
-        });
-        LiveData<UnregisteredUser> userLiveData = registerViewModel.getUnregisteredUserLiveData();
-        userLiveData.observe(this, unregisteredUser -> {
-            // TODO: try to make the request work properly
+        registerUser.setOnClickListener(view -> registerNewUser());
+        LiveData<ServerResponse> userLiveData = registerViewModel.getUnregisteredUserLiveData();
+        userLiveData.observe(this, response -> {
+            Log.d("LiveData", "onResume: "
+                    + response.getResponseStatus() + "\n" + response.getResponseToken());
         });
     }
 
+    @SuppressLint("NewApi")
     private void registerNewUser() {
         String userFullName = fullName.getText().toString();
         String userBirthday = birthday.getText().toString();
@@ -59,8 +65,14 @@ public class SignUpActivity extends AppCompatActivity {
         String userName = username.getText().toString();
         String userPassword = password.getText().toString();
         registerViewModel.makeRegisterRequest(new UnregisteredUser(
-                userFullName, userBirthday, userEmail, userPhone,
-                userAddress, userName, userPassword, ""));
+                "Andrew Long",
+                "1994/12/12",
+                "and.long@gmail.com",
+                "373798551426",
+                "str.Burebista",
+                "and.long",
+                "longlongAndTest123",
+                "L3NkY2FyZC9Eb3dubG9hZC9Ed2F5bmVfSm9obnNvbl8yLF8yMDEzLmpwZw=="));
     }
 
     private void referenceViews() {
