@@ -11,7 +11,8 @@ Interfața va fi adaptată pentru minim 3 dimensiuni ale ecranului (mdpi,hdpi,xh
 
 La acest laborator nu se cere implementarea logicii de program. E suficient de realizat schimbul intre Activități la tratarea anumitor evenimente.
 
-!!! Testat cu succes pe (AVD Manager):
+!!! Testat cu succes pe :
+AVD Manager
 |Name|Resolution|API|Target|CPU/ABI|Size on Disk|
 |---|---|---|---|---|---|
 |4.7 WXGA API 29|720 x 1280: xhdpi|29|Android 10.0 (Google APIs)|x86|3.6 GB|
