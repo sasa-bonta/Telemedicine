@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Telemedicine.iml" filepath="$PROJECT_DIR$/Telemedicine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Telemedicine-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Telemedicine-app.iml" group="Telemedicine/app" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/telemedicine-Telemedicine.iml" filepath="$PROJECT_DIR$/.idea/modules/telemedicine-Telemedicine.iml" group="Telemedicine" />
     </modules>
   </component>
 </project>

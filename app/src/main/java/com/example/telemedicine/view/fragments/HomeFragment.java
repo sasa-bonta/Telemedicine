@@ -11,7 +11,6 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.telemedicine.R;
-import com.example.telemedicine.viewModel.AppointmentViewModel;
 
 public class HomeFragment extends Fragment {
 
@@ -28,8 +27,5 @@ public class HomeFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        AppointmentViewModel appointmentViewModel = ViewModelProviders.of(this)
-                .get(AppointmentViewModel.class);
-        //appointmentViewModel.makeNewAppointmentRequest();
     }
 }

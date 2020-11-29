@@ -83,6 +83,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**Implementarea meniului in josul activitatii main**/
+
     private Fragment createNewFragment(Integer itemId) {
         Menu item = navigationView.getMenu();
         MenuItem add = item.findItem(R.id.navigation_add);
